@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Counter</string>
+    <string name="action_limit">Turn ON limit</string>
+    <string name="action_detail">Detail Count</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="textviewnumbertext">0</string>
+    <string name="addonetext">+</string>
+    <string name="subonetext">-</string>
+    <string name="limittext">limit : 0</string>
+    <string name="btnresettext">Reset</string>
+</resources>
