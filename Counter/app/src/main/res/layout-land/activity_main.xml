@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnadd"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginBottom="175dp"
+            android:background="@drawable/green_circle"
+            android:text="@string/addonetext"
+            android:textSize="@dimen/buttontextsize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textnumber"
+            app:layout_constraintVertical_bias="0.597" />
+
+        <Button
+            android:id="@+id/btnmin"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="175dp"
+            android:background="@drawable/red_circle"
+            android:text="@string/subonetext"
+            android:textSize="@dimen/buttontextsize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textnumber"
+            app:layout_constraintVertical_bias="0.597" />
+
+        <TextView
+            android:id="@+id/textlimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/remainingtextsize"
+            app:layout_constraintBottom_toTopOf="@+id/btnmin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textnumber"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.594" />
+
+        <Button
+            android:id="@+id/btnreset"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:text="@string/btnresettext"
+            android:textSize="@dimen/remainingtextsizelsand"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textnumber" />
+
+        <TextView
+            android:id="@+id/textnumber"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:text="@string/textviewnumbertext"
+            android:textSize="@dimen/textviewnumbersizeland"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

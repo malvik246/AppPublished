@@ -1,5 +1,7 @@
 <resources>
     <dimen name="textviewnumbersize">150sp</dimen>
     <dimen name="buttontextsize">75sp</dimen>
+    <dimen name="textviewnumbersizeland">125sp</dimen>
     <dimen name="remainingtextsize">25sp</dimen>
+    <dimen name="remainingtextsizelsand" >20sp</dimen>
 </resources>
