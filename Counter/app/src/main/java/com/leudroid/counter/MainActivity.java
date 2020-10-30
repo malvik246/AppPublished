@@ -72,6 +72,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        if(savedInstanceState != null){
+            counter=savedInstanceState.getInt("counter");
+            limitOnOff=savedInstanceState.getBoolean("limitOnOff");
+            if(limitOnOff){
+                limit=savedInstanceState.getInt("limit");
+                changeNumberBackground();
+            }
+
+
+            textNumber.setText(counter+"");
+        }
+
     }
 
     @Override
@@ -137,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         MenuItem item = menu.findItem(R.id.action_limit);
-        if (item.getTitle().equals("Turn ON limit") && limitOnOff) {
+        if (limitOnOff) {
             item.setTitle("Turn OFF limit");
         } else {
             item.setTitle("Turn ON limit");
@@ -210,6 +222,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-   
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("counter",counter);
+        outState.putBoolean("limitOnOff",limitOnOff);
+        if(limitOnOff){
+            outState.putInt("limit",limit);
+        }
+    }
 
 }
